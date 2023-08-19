@@ -17,8 +17,8 @@ Getting Started 🚀
 Follow these steps to set up and run the Multi-User Chatroom on your local machine:
 
 npm install express socket.io --save
-node server.js
 
+node server.js
 
 Install dependencies: npm install
 Start the server: npm start
