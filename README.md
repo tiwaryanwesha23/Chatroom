@@ -16,16 +16,22 @@ Features ✨
 Getting Started 🚀
 Follow these steps to set up and run the Multi-User Chatroom on your local machine:
 
-Clone the repository: git clone https://github.com/your-username/multi-user-chatroom.git
+npm install express socket.io --save
+node server.js
+
+
 Install dependencies: npm install
 Start the server: npm start
 Open your browser and navigate to: http://localhost:3000
+
 Technologies Used 💻
 Node.js
 Express.js
 Socket.IO
 Potential Improvements 💡
+
 Private Messaging: Implement direct messages between users.
+
 Moderation: Add moderation features to manage the chatroom.
 
 
