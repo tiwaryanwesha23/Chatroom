@@ -1,39 +1,101 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<div class="app">
-		<div class="screen join-screen active">
-			<div class="form">
-				<h2>Join Chatroom</h2>
-				<div class="form-input">
-					<label>Username</label>
-					<input type="text" id="username">
-				</div>
-				<div class="form-input">
-					<button id="join-user">Join</button>
-				</div>
-			</div>
-		</div>
-		<div class="screen chat-screen">
-			<div class="header">
-				<div class="logo">Chatroom</div>
-				<button id="exit-chat">Exit</button>
-			</div>
-			<div class="messages">
-			</div>
-			<div class="typebox">
-				<input type="text" id="message-input">
-				<button id="send-message">Send</button>
-			</div>
-		</div>
-	</div>
+  <head>
+    <meta charset="utf-8">
+    <title>Chatroom</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
+  </head>
+  <body>
+    <div class="app">
+      <div class="screen join-screen active">
+        <div class="form">
+          <h2>Join Chatroom</h2>
+          <div class="form-input">
+            <label>Username</label>
+            <input type="text" id="username">
+          </div>
+          <div class="form-input">
+            <button id="join-user">Join</button>
+          </div>
+        </div>
+      </div>
 
-	<script type="text/javascript" src="socket.io/socket.io.js"></script>
-	<script type="text/javascript" src="code.js"></script>
-</body>
+      <!-- Add an image upload section -->
+      <div class="screen theme-selection-screen">
+        <div class="theme-options">
+          <h2>Select a Theme</h2>
+          <!-- Option to select Theme 1 -->
+          <div class="theme-option">
+            <label>
+              <input type="radio" name="theme" value="theme1" checked>
+              Theme 1
+            </label>
+            <a href="img/bg1.jpg" alt target="_blank">View Theme</a>
+          </div>
+          <!-- Option to select Theme 2 -->
+          <div class="theme-option">
+            <label>
+              <input type="radio" name="theme" value="theme2">
+              Theme 2
+            </label>
+            <a href="img/bg2.jpg" target="_blank">View Theme</a>
+          </div>
+          <!-- Option to select Theme 3 -->
+          <div class="theme-option">
+            <label>
+              <input type="radio" name="theme" value="theme3">
+              Theme 3
+            </label>
+            <a href="img/bg3.jpg" target="_blank">View Theme</a>
+          </div>
+          <!-- Option to select Theme 4 -->
+          <div class="theme-option">
+            <label>
+              <input type="radio" name="theme" value="theme4">
+              Theme 4
+            </label>
+            <a href="img/bg4.jpg" target="_blank">View Theme</a>
+          </div>
+          
+          <div class="form-input">
+            <button id="select-theme">Select Theme</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add a chat screen with the selected theme applied -->
+      <div class="screen chat-screen">
+        <div class="header">
+          <div class="logo">Chatroom</div>
+          <button id="exit-button">Exit</button>
+        </div>
+        <div class="messages">
+          <!-- Messages will be displayed here -->
+        </div>
+        <div class="typebox">
+          <input type="text" id="message-input">
+          <div class="timestamp" id="message-timestamp"></div>
+          <button id="send-message">Send</button>
+        </div>
+      </div>
+
+      <!-- <div class="screen chat-screen">
+        <div class="header">
+          <div class="logo">Chatroom</div>
+          <button id="exit-chat">Exit</button>
+        </div>
+        <div class="messages">
+        </div>
+        <div class="typebox">
+          <input type="text" id="message-input">
+          <div class="timestamp" id="message-timestamp"></div>
+          <button id="send-message">Send</button>
+        </div>
+      </div> -->
+    </div>
+
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+  </body>
 </html>
